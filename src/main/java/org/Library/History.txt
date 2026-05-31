@@ -1,0 +1,5 @@
+Library Loan History Database File
+==================================
+[LOAN_CREATED] loggedAt=2026-05-28T12:21:05.946902200 | loanId=1 | bookTitle="Scary Carrots" | userName="Adam" | userEmail="adam@adam.sk" | borrowedAt=2026-05-28 | returnDate=2026-06-11 | returned=false | overdue=false
+[LOAN_RETURNED] loggedAt=2026-05-28T12:25:52.905748100 | loanId=1 | bookTitle="Scary Carrots" | userName="Adam" | userEmail="adam@adam.sk" | borrowedAt=2026-05-28 | returnDate=2026-06-11 | returned=true | overdue=false
+[LOAN_CREATED] loggedAt=2026-05-28T12:26:09.334638 | loanId=2 | bookTitle="Funny Carrot" | userName="Adam" | userEmail="adam@adam.sk" | borrowedAt=2026-05-28 | returnDate=2026-06-11 | returned=false | overdue=false

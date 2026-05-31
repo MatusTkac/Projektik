@@ -1,0 +1,2 @@
+1|Adam|adam@adam.sk|2026-05-28
+2|Username!|one@one.sk|2026-05-28
