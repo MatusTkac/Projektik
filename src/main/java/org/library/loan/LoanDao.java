@@ -1,4 +1,4 @@
-package org.Library.loan;
+package org.library.loan;
 
 import java.util.List;
 

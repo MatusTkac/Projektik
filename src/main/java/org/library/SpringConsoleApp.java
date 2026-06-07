@@ -1,7 +1,7 @@
-package org.Library;
+package org.library;
 
-import org.Library.database.LibraryDatabase;
-import org.Library.history.HistoryService;
+import org.library.database.LibraryDatabase;
+import org.library.history.HistoryService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

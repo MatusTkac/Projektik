@@ -1,12 +1,12 @@
-package org.Library.loan;
+package org.library.loan;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.Library.book.Book;
-import org.Library.common.Displayable;
-import org.Library.common.Identifiable;
-import org.Library.user.User;
+import org.library.book.Book;
+import org.library.common.Displayable;
+import org.library.common.Identifiable;
+import org.library.user.User;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;

@@ -1,9 +1,9 @@
-package org.Library.loan;
+package org.library.loan;
 
-import org.Library.book.Book;
-import org.Library.book.BookDao;
-import org.Library.user.UserDao;
-import org.Library.user.User;
+import org.library.book.Book;
+import org.library.book.BookDao;
+import org.library.user.UserDao;
+import org.library.user.User;
 
 import java.io.IOException;
 import java.nio.file.Files;

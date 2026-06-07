@@ -1,12 +1,12 @@
-package org.Library.database;
+package org.library.database;
 
-import org.Library.book.*;
-import org.Library.loan.FileBasedLoanDao;
-import org.Library.loan.Loan;
-import org.Library.loan.LoanDao;
-import org.Library.user.FileBasedUserDao;
-import org.Library.user.User;
-import org.Library.user.UserDao;
+import org.library.book.*;
+import org.library.loan.FileBasedLoanDao;
+import org.library.loan.Loan;
+import org.library.loan.LoanDao;
+import org.library.user.FileBasedUserDao;
+import org.library.user.User;
+import org.library.user.UserDao;
 
 import java.nio.file.Path;
 import java.util.List;

@@ -1,12 +1,12 @@
-package org.Library;
+package org.library;
 
-import org.Library.book.Author;
-import org.Library.book.Book;
-import org.Library.book.Category;
-import org.Library.database.LibraryDatabase;
-import org.Library.history.HistoryService;
-import org.Library.loan.Loan;
-import org.Library.user.User;
+import org.library.book.Author;
+import org.library.book.Book;
+import org.library.book.Category;
+import org.library.database.LibraryDatabase;
+import org.library.history.HistoryService;
+import org.library.loan.Loan;
+import org.library.user.User;
 
 import java.time.LocalDate;
 import java.util.List;

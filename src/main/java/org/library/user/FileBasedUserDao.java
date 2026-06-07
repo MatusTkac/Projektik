@@ -1,4 +1,4 @@
-package org.Library.user;
+package org.library.user;
 
 import java.io.IOException;
 import java.nio.file.Files;

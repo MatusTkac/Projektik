@@ -1,4 +1,4 @@
-package org.Library.user;
+package org.library.user;
 
 import java.util.List;
 import java.util.Optional;
