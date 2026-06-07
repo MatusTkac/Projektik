@@ -1,11 +1,11 @@
-package org.Library.User;
+package org.Library.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.Library.Common.Displayable;
-import org.Library.Common.Identifiable;
+import org.Library.common.Displayable;
+import org.Library.common.Identifiable;
 
 import java.time.LocalDate;
 

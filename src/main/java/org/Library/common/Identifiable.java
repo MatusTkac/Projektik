@@ -1,4 +1,4 @@
-package org.Library.Common;
+package org.Library.common;
 
 public interface Identifiable {
     Long getId();

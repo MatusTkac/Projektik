@@ -7,19 +7,33 @@ import org.Library.database.LibraryDatabase;
 import org.Library.history.HistoryService;
 import org.Library.loan.Loan;
 import org.Library.user.User;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
-public class Main {
-    private static final Scanner scanner = new Scanner(System.in);
-    private static final LibraryDatabase database = new LibraryDatabase();
-    private static final HistoryService historyService = new HistoryService("src/main/java/org/Library/History.txt");
+@Component
+public class LibraryConsoleRunner implements CommandLineRunner {
+    private final Scanner scanner;
+    private final LibraryDatabase database;
+    private final HistoryService historyService;
 
-    public static void main(String[] args) {
-        System.out.println("Welcome to Library System!");
+    public LibraryConsoleRunner(
+            Scanner scanner,
+            LibraryDatabase database,
+            HistoryService historyService
+    ) {
+        this.scanner = scanner;
+        this.database = database;
+        this.historyService = historyService;
+    }
+
+    @Override
+    public void run(String... args) {
+        System.out.println("Welcome to Library System - Spring Console App!");
 
         boolean running = true;
 
@@ -41,7 +55,7 @@ public class Main {
         }
     }
 
-    private static void printMainMenu() {
+    private void printMainMenu() {
         System.out.println();
         System.out.println("===== MAIN MENU =====");
         System.out.println("1. Admin");
@@ -49,7 +63,7 @@ public class Main {
         System.out.println("0. Exit");
     }
 
-    private static void adminMenu() {
+    private void adminMenu() {
         boolean adminRunning = true;
 
         while (adminRunning) {
@@ -82,7 +96,7 @@ public class Main {
         }
     }
 
-    private static void userMenu() {
+    private void userMenu() {
         boolean userRunning = true;
 
         while (userRunning) {
@@ -109,7 +123,7 @@ public class Main {
         }
     }
 
-    private static void addAuthor() {
+    private void addAuthor() {
         System.out.println();
         System.out.println("===== ADD AUTHOR =====");
 
@@ -127,7 +141,7 @@ public class Main {
         System.out.println("Author added successfully.");
     }
 
-    private static void addCategory() {
+    private void addCategory() {
         System.out.println();
         System.out.println("===== ADD CATEGORY =====");
 
@@ -143,7 +157,7 @@ public class Main {
         System.out.println("Category added successfully.");
     }
 
-    private static void addBook() {
+    private void addBook() {
         System.out.println();
         System.out.println("===== ADD BOOK =====");
 
@@ -194,8 +208,7 @@ public class Main {
         System.out.println("Book added successfully.");
     }
 
-
-    private static void addUser() {
+    private void addUser() {
         System.out.println();
         System.out.println("===== ADD USER =====");
 
@@ -214,7 +227,7 @@ public class Main {
         System.out.println("User added successfully.");
     }
 
-    private static void borrowBook() {
+    private void borrowBook() {
         System.out.println();
         System.out.println("===== BORROW BOOK =====");
 
@@ -270,7 +283,7 @@ public class Main {
         System.out.println("Please return it by: " + loan.getReturnDate());
     }
 
-    private static void returnBook() {
+    private void returnBook() {
         System.out.println();
         System.out.println("===== RETURN BOOK =====");
 
@@ -331,21 +344,21 @@ public class Main {
         System.out.println("Book returned successfully.");
     }
 
-    private static List<Book> getAvailableBooks() {
+    private List<Book> getAvailableBooks() {
         return database.getBooks()
                 .stream()
                 .filter(Book::isAvailable)
                 .toList();
     }
 
-    private static List<Book> getUnavailableBooks() {
+    private List<Book> getUnavailableBooks() {
         return database.getBooks()
                 .stream()
                 .filter(book -> !book.isAvailable())
                 .toList();
     }
 
-    private static void showAuthors() {
+    private void showAuthors() {
         System.out.println();
         System.out.println("===== AUTHORS =====");
 
@@ -359,7 +372,7 @@ public class Main {
         );
     }
 
-    private static void showCategories() {
+    private void showCategories() {
         System.out.println();
         System.out.println("===== CATEGORIES =====");
 
@@ -373,7 +386,7 @@ public class Main {
         );
     }
 
-    private static void showBooks(List<Book> books) {
+    private void showBooks(List<Book> books) {
         System.out.println();
         System.out.println("===== BOOKS =====");
 
@@ -396,7 +409,7 @@ public class Main {
         });
     }
 
-    private static void showUsers() {
+    private void showUsers() {
         System.out.println();
         System.out.println("===== USERS =====");
 
@@ -410,12 +423,12 @@ public class Main {
         );
     }
 
-    private static String readText(String message) {
+    private String readText(String message) {
         System.out.print(message);
         return scanner.nextLine().trim();
     }
 
-    private static int readInt(String message) {
+    private int readInt(String message) {
         while (true) {
             try {
                 System.out.print(message);
@@ -426,7 +439,7 @@ public class Main {
         }
     }
 
-    private static Long readLong(String message) {
+    private Long readLong(String message) {
         while (true) {
             try {
                 System.out.print(message);

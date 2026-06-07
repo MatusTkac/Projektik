@@ -1,11 +1,11 @@
-package org.Library.Book;
+package org.Library.book;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.Library.Common.Displayable;
-import org.Library.Common.Identifiable;
+import org.Library.common.Displayable;
+import org.Library.common.Identifiable;
 
 @Getter
 @Setter

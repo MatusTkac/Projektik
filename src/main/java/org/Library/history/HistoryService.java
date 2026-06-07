@@ -1,6 +1,6 @@
-package org.Library.History;
+package org.Library.history;
 
-import org.Library.Loan.Loan;
+import org.Library.loan.Loan;
 
 import java.io.IOException;
 import java.nio.file.Files;
